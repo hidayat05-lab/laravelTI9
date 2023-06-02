@@ -2,8 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\formcontroler;
-use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FormskillController;
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\FrontendController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +36,22 @@ route::get('/form',[formcontroler::class, 'index']);
 route::post('/hasil',[formcontroler::class, 'store']);
 route::get('/dashboard',[DashboardController::class, 'index']);
 route::get('/formskill',[FormskillController::class, 'index']);
+route::post('/formskill',[FormskillController::class, 'store']);
 
+
+
+Route::prefix('admin')->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    // Buat route untuk produk
+    Route::get('/produk', [ProdukController::class, 'index'])->name('produk');
+});
+
+
+
+Route::prefix('frontend')->group(function () {
+    Route::get('/frontend', [FrontendController::class, 'index'])->name('frontend');
+
+});
+    
 
 

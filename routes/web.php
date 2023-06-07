@@ -6,6 +6,8 @@ use App\Http\Controllers\FormskillController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\produksController;
+use App\Http\Controllers\formTugas1Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,6 +37,7 @@ route::get('/hallo2', function(){
 route::get('/form',[formcontroler::class, 'index']);
 route::post('/hasil',[formcontroler::class, 'store']);
 route::get('/dashboard',[DashboardController::class, 'index']);
+route::get('/formTugas1',[FormTugas1Controller::class, 'index']);
 route::get('/formskill',[FormskillController::class, 'index']);
 route::post('/formskill',[FormskillController::class, 'store']);
 
@@ -53,5 +56,6 @@ Route::prefix('frontend')->group(function () {
 
 });
     
+route::get('/produk',[produksController::class, 'index']);
 
 

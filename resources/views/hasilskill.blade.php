@@ -22,7 +22,7 @@
     </tr>
     <tr>
         <td>jenis kelamin</td>
-        <td>{{ $data->jenis_kelamin}}</td>
+        <td>{{ $data->jk}}</td>
     </tr>
     <tr>
         <td>Skill</td>

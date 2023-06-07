@@ -21,14 +21,14 @@
 			<!--
 			CSS
 			============================================= -->
-			<link rel="stylesheet" href="{{asset('frontend/css/linearicons.css'}}">
-			<link rel="stylesheet" href="{{asset('frontend/css/font-awesome.min.css'}}">
-			<link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css'}}">
-			<link rel="stylesheet" href="{{asset('frontend/css/magnific-popup.css'}}">
-			<link rel="stylesheet" href="{{asset('frontend/css/nice-select.css'}}">					
-			<link rel="stylesheet" href="{{asset('admin/animate.min.css'}}">
-			<link rel="stylesheet" href="{{asset('frontend/css/owl.carousel.css'}}">
-			<link rel="stylesheet" href="{{asset('frontend/css/main.css'}}">
+			<link rel="stylesheet" href="{{asset('frontend/css/linearicons.css')}}">
+			<link rel="stylesheet" href="{{asset('frontend/css/font-awesome.min.css')}}">
+			<link rel="stylesheet" href="{{asset('frontend/css/bootstrap.css')}}">
+			<link rel="stylesheet" href="{{asset('frontend/css/magnific-popup.css')}}">
+			<link rel="stylesheet" href="{{asset('frontend/css/nice-select.css')}}">					
+			<link rel="stylesheet" href="{{asset('admin/animate.min.css')}}">
+			<link rel="stylesheet" href="{{asset('frontend/css/owl.carousel.css')}}">
+			<link rel="stylesheet" href="{{asset('frontend/css/main.css')}}">
 		</head>
 		<body>
 

@@ -28,20 +28,19 @@ class FormskillController extends Controller
      */
     public function store(Request $request)
     {
-        //
-        {
+       
+
             //
-            $this->validate($request, [
-                'nama' =>'required|min:5|max:20',
-                'email' =>'required',
-                'lokasi' =>'required',
-                'jenis_kelamin' =>'required',
-                'skill' =>'required',
+         $this->validate($request, [
+            'nama' =>'required|min:5|max:20',
+            'email' =>'required',
+            'lokasi' =>'required',
+            'jenis_kelamin' =>'required',
+            'skill' =>'required',
     
-            ]);
-            return view('hasilskill', ['data' => $request]);
+        ]);
+        return view('hasilskill', ['data' => $request]);
     
-        }
     }
 
     /**

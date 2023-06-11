@@ -14,6 +14,7 @@ class produk extends Model
     use HasFactory;
     //memanggil table yang akan dikelola
     protected $table = 'produk';
+    public $timestamps = false;
     //mendklarasikan kolom yang ada dalam table
     protected $fillable = [
         'kode',
@@ -23,10 +24,18 @@ class produk extends Model
         'stok',
         'min_stok',
         'deskripsi',
-        'kategori_produk-id',
+        'kategori_produk_id',
     ];
     public function kategoriproduk(){
         return $this->belongTo(kategoriproduk::class);
+    }
+    public function getAllData(){
+        return DB::table('produk')
+        ->join('kategori_produk', 'produk.kategori_produk_id', '=','kategori_produk.id')
+        ->select('produk.*', 'kategori_produk.nama as nama')
+        ->get();
+
+
     }
 
 }

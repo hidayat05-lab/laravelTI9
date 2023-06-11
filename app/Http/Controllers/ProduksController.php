@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use app\http\models\produk;
-use app\http\models\kategoriproduk;
+use App\Models\produk;
+use app\models\kategoriproduk;
 Use DB;
 
 class ProduksController extends Controller
@@ -33,6 +33,10 @@ class ProduksController extends Controller
     public function create()
     {
         //
+        $kategori_produk = DB ::table('kategori_Produk')->get();
+        $produk = DB ::table('Produk')->get(); 
+
+        return view ('admin.produk.create', compact('produk','kategori_produk'));
     }
 
     /**
@@ -41,6 +45,18 @@ class ProduksController extends Controller
     public function store(Request $request)
     {
         //
+        $produk = new Produk;
+        $produk->kode = $request->kode;
+        $produk->nama = $request->nama;
+        $produk->harga_jual = $request->harga_jual;
+        $produk->harga_beli = $request->harga_beli;
+        $produk->stok = $request->stok;
+        $produk->min_stok = $request->min_stok;
+        $produk->deskripsi = $request->deskripsi;
+        $produk->kategori_produk_id = $request->kategori_produk_id;
+        $produk->save();
+        return redirect('admin/produk');
+
     }
 
     /**

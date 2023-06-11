@@ -1,7 +1,7 @@
 @extends('admin.layout.appadmin')
 @section('content')
 
-<h1 align="center">selamat datang di produk</h1>
+<h1 align="center">selamat datang di pesanan</h1>
 <h1 class="mt-4">Tables</h1>
 <ol class="breadcrumb mb-4">
     <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
@@ -18,52 +18,52 @@
 <div class="card mb-4">
     <div class="card-header">
         <!-- <i class="fas fa-table me-1"></i> -->
-        <a class="btn btn-success" href="{{url('admin/produk/create')}}">Create Produk</a>
+        <a class="btn btn-success" href="{{url('admin/produk/create')}}">Create pesanan</a>
     </div>
     <div class="card-body">
         <table id="datatablesSimple">
             <thead>
                 <tr>
                 <th>No</th>
-                <th>Kode</th>
-                <th>Nama</th>
-                <th>Harga Jual</th>
-                <th>Harga Beli</th>
-                <th>Stok</th>
-                <th>Minimal Stok</th>
+                <th>tanggal</th>
+                <th>Nama pemesan</th>
+                <th>alamat pesanan</th>
+                <th>No hp</th>
+                <th>email</th>
+                <th>jumlah_pesanan</th>
                 <th>Deskripi</th>
-                <th>Kategori Produk</th> 
+                <th>Produk</th> 
                 <th>action</th> 
                 </tr>
             </thead>
             <tfoot>
                 <tr>
-                <th>Kode</th>
-                <th>Nama</th>
-                <th>Harga Jual</th>
-                <th>Harga Beli</th>
-                <th>Stok</th>
-                <th>Minimal Stok</th>
+                <th>tanggal</th>
+                <th>Nama pemesan</th>
+                <th>Alamat pemesan</th>
+                <th>No hp</th>
+                <th>email</th>
+                <th>jumlah pesanan</th>
                 <th>Deskripi</th>
-                <th>Kategori Produk</th> 
-                    <th>Action</th>
+                <th>Produk</th> 
+                <th>Action</th>
                 </tr>
             </tfoot>
             <tbody>
             @php $no = 1; @endphp
-            @foreach($produk as $p)
+            @foreach($pesanan as $p)
 
        
             <tr>
-            <td>{{$no}}</td>
-            <td>{{$p->kode}}</td>
-            <td>{{$p->nama}}</td>
-            <td>{{$p->harga_jual}}</td>
-            <td>{{$p->harga_beli}}</td>
-            <td>{{$p->stok}}</td>
-            <td>{{$p->min_stok}}</td>
+            <td>{{$no}}</td> 
+            <td>{{$p->tanggal}}</td>
+            <td>{{$p->nama_pemesan}}</td>
+            <td>{{$p->alamat_pemesan}}</td>
+            <td>{{$p->no_hp}}</td>
+            <td>{{$p->email}}</td>
+            <td>{{$p->jumlah_pesanan}}</td>
             <td>{{$p->deskripsi}}</td>
-            <td>{{$p->nama_kategori}}</td> 
+            <td>{{$p->produk_id}}</td> 
                 <td>
                     <a class="btn btn-primary" href=''>View</a>
                     <a class="btn btn-primary" href=''>Edit</a>

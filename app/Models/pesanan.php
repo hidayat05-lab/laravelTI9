@@ -9,7 +9,7 @@ class pesanan extends Model
 {
     use HasFactory;
     //memanggil table yang akan dikelola
-    protected $table = 'produk';
+    protected $table = 'pesanan';
     public $timestamps = false;
     //mendklarasikan kolom yang ada dalam table
     protected $fillable = [
@@ -23,7 +23,7 @@ class pesanan extends Model
         'produk_id',
     ];
     public function produk(){
-        return $this->belongTo(produk::class);
+        return $this->belongTo(pesanan::class);
     }
     public function getAllData(){
         return DB::table('pesanan')

@@ -66,8 +66,8 @@
             <td>{{$p->nama_kategori}}</td> 
                 <td>
                     <a class="btn btn-primary" href=''>View</a>
-                    <a class="btn btn-primary" href=''>Edit</a>
-                    <a class="btn btn-primary" href=''>Delete</a>
+                    <a class="btn btn-primary" href="{{url('admin/produk/edit'.$p->id)}}">Edit</a>
+                    <a class="btn btn-primary" href="{{url('admin/produk/delete/'.$p->id)}}">Delete</a>
                 </td>
             </tr>
        @endforeach

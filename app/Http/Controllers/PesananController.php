@@ -14,7 +14,7 @@ class PesananController extends Controller
      */
     public function index()
     {
-        //
+        // 
         $pesanan = DB:: table ('pesanan')
         ->join('produk', 'pesanan.produk_id', '=','produk_id')
         ->select('pesanan.*', 'produk.nama as nama_produk')

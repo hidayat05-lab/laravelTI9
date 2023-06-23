@@ -55,15 +55,15 @@
   <div class="form-group row">
     <label for="textarea" class="col-4 col-form-label">Deskripsi</label> 
     <div class="col-8">
-      <textarea id="textarea" name="deskripsi" cols="40" rows="5" class="form-control">{{$p->deskripsi}}</textarea>
+      <textarea id="textarea" name="deskripsi" cols="40" rows="5" class="form-control" value="{{$p->deskripsi}}"></textarea>
     </div>
   </div>
   <div class="form-group row">
     <label for="select" class="col-4 col-form-label">Kategori Produk</label> 
     <div class="col-8">
       <select id="select" name="kategori_produk_id" class="custom-select">
-      @foreach ($kategori_produk as $d) 
-      <option value="{{$d->id}}">{{$d->nama}}</option>
+      @foreach ($kategori_produk as $k) 
+      <option value="{{$d->id}}">{{$k->nama}}</option>
         @endforeach
       </select>
     </div>
